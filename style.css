@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway:wght@100;200;300;400&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-font: "Raleway", sans-serif;
+    --secondary-font: "Montserrat", sans-serif;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    transition: background-color 0.5s ease-in-out;
+}
+.container {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+ul {
+    display: flex;
+    align-items: center;
+}
+li {
+    list-style: none;
+}
+/* navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+}
+.navbar .logo {
+    font-size: 1.2rem;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.navbar .logo span {
+    font-size: 1.3rem;
+    font-family: var(--secondary-font);
+    font-weight: 600;
+}
+.navbar ul li {
+    margin-right: 2rem;
+    font-family: var(--secondary-font);
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.navbar ul li:hover::after {
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: orange;
+}
+.navbar ul li:last-child {
+    margin-right: 0;
+}
+.navbar ul li:last-child::after {
+    content: "";
+    display: none;
+}
+
+/* navbar */
+.themeBtn {
+    border: 1px solid #333;
+    position: relative;
+    overflow: hidden;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    background-color: #333;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+input[type="radio"] {
+    display: none;
+}
+label {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+.themeBtn > div {
+    position: absolute;
+    top: 2px;
+    height: 24px;
+    width: 24px;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color, left 0.4s ease-in-out;
+}
+#white:checked ~ div {
+    left: -1px;
+    background-color: white;
+}
+#dark:checked ~ div {
+    left: 27px;
+    background-color: #333;
+}

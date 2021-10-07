@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dark Theme</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <h2 class="logo">awesome<span>BackGround</span></h2>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Blog</li>
+                    <li>Service</li>
+                    <li>Contact Us</li>
+                    <li class="themeBtn">
+                        <input type="radio" name="theme" id="white">
+                <label for="white" class="white">🌞 </label>
+                <input type="radio" name="theme" id="dark">
+                <label for="dark" class="dark"> 🌙 </label>
+                <div class="btn"></div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- <div class="themeBtn">
+                <input type="radio" name="theme" id="white">
+                <label for="white" class="white">🌞 </label>
+                <input type="radio" name="theme" id="dark">
+                <label for="dark" class="dark"> 🌙 </label>
+                <div class="btn"></div>
+            </div> -->
+        </div>  
+    </header>
+    <script>
+        const dark = document.getElementById("dark")
+        const white = document.getElementById("white")
+        const themeBtn = document.querySelector('.themeBtn');
+        
+        dark.addEventListener('click',(e) =>changeTheme(e));
+        white.addEventListener('click',(e) =>changeTheme(e));
+
+        function changeTheme(e){
+            if(e.target.id === "dark"){
+                document.body.style.backgroundColor = "#333";
+                themeBtn.style.backgroundColor = "white"
+            }else if(e.target.id === "white"){
+                document.body.style.backgroundColor = "white";
+                themeBtn.style.backgroundColor = "#333"
+            }
+        }
+    </script>
+</body>
+</html>
