@@ -11,7 +11,7 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <h2 class="logo">awesome<span>BackGround</span></h2>
+                <h2 class="logo">awesome<span>Arts</span></h2>
                 <ul>
                     <li>Home</li>
                     <li>About</li>
@@ -27,15 +27,32 @@
                     </li>
                 </ul>
             </nav>
-            <!-- <div class="themeBtn">
-                <input type="radio" name="theme" id="white">
-                <label for="white" class="white">🌞 </label>
-                <input type="radio" name="theme" id="dark">
-                <label for="dark" class="dark"> 🌙 </label>
-                <div class="btn"></div>
-            </div> -->
         </div>  
     </header>
+
+    <section class="heroSection container">
+        <div class="leftPart">
+            <h2 class="title">Welcome to <span>Awesome Arts</span></h2>
+            <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nulla, culpa delectus adipisci sapiente unde doloribus, vitae eius aliquid voluptates, aspernatur possimus est atque earum hic explicabo alias in cupiditate?</p>
+            <button class="btn">learn More</button>
+        </div>
+        <div class="rightPart">
+            <div class="imageSection">
+                <div class="images">
+                    <div class="image img2">
+                        <img src="./images/5.png" alt="2">
+                    </div>
+                    <div class="image img1">
+                        <img src="./images/4.jpg" alt="1">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
     <script>
         const dark = document.getElementById("dark")
         const white = document.getElementById("white")
@@ -47,10 +64,12 @@
         function changeTheme(e){
             if(e.target.id === "dark"){
                 document.body.style.backgroundColor = "#333";
+                document.body.classList.add("dark");
                 themeBtn.style.backgroundColor = "white"
             }else if(e.target.id === "white"){
                 document.body.style.backgroundColor = "white";
-                themeBtn.style.backgroundColor = "#333"
+                document.body.classList.remove("dark");
+                themeBtn.style.backgroundColor = "rgb(77, 76, 76)"
             }
         }
     </script>
